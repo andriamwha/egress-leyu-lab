@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leyu 简明指南 · 信息索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafafa;
+      color: #1e1e1e;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      padding: 2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.25rem 0;
+      line-height: 1.2;
+      color: #111;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5a5a5a;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 2.2rem 0 0.75rem 0;
+      color: #222;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 1.4rem 0 0.5rem 0;
+      color: #2c2c2c;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+    }
+
+    a {
+      color: #1a5c8a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    a:hover {
+      border-bottom-color: #1a5c8a;
+    }
+
+    /* 卡片模块 —— 目录感 */
+    .index-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.8rem 0 2rem 0;
+    }
+
+    .index-card {
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      padding: 1.2rem 1rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .index-card:hover {
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .index-card .card-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #7a7a7a;
+      margin-bottom: 0.3rem;
+    }
+
+    .index-card .card-title {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .index-card .card-desc {
+      font-size: 0.9rem;
+      color: #4a4a4a;
+    }
+
+    /* 提示区 */
+    .notice-box {
+      background: #f2f6fa;
+      border-left: 4px solid #1a5c8a;
+      border-radius: 0 8px 8px 0;
+      padding: 1.1rem 1.3rem;
+      margin: 2rem 0 1.8rem 0;
+      font-size: 0.92rem;
+    }
+
+    .notice-box strong {
+      color: #0d3552;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      border-bottom: 1px solid #ececec;
+      padding: 0.7rem 0;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1f1f1f;
+    }
+
+    .faq-a {
+      margin-top: 0.15rem;
+      color: #4a4a4a;
+      font-size: 0.92rem;
+    }
+
+    /* 相关信息区 */
+    .rel-links {
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin: 2rem 0 0.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+    }
+
+    .rel-links span {
+      color: #5f5f5f;
+      font-size: 0.88rem;
+    }
+
+    .rel-links a {
+      font-size: 0.88rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 2.5rem 0 1rem 0;
+    }
+
+    .footer-note {
+      color: #7c7c7c;
+      font-size: 0.82rem;
+      text-align: center;
+      margin-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+      .index-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      body {
+        padding: 1.5rem 1rem;
+      }
+      .rel-links {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>leyu · 知识库入口</h1>
+      <div class="subhead">简明指南 &amp; 访问提醒 —— 从这里开始熟悉</div>
+    </header>
+
+    <!-- 说明区：背景与定位 -->
+    <section>
+      <p>如果你刚接触 <a href="https://egress-leyu.com.cn">leyu</a>，或者想重新梳理它的功能脉络，这份页面会像一张折叠的地图：帮你标出几个关键路口，也提醒你哪些路段需要多留意。下面按照从概览到细节的顺序，整理了你可能会用到的信息模块。</p>
+    </section>
+
+    <!-- 目录感卡片网格 -->
+    <h2>📋 内容索引</h2>
+    <div class="index-grid">
+      <div class="index-card">
+        <div class="card-label">01 · 平台概述</div>
+        <div class="card-title">leyu 是什么</div>
+        <div class="card-desc">一套围绕资源获取与信息组织的工具，侧重轻量、直接的使用体验。</div>
+      </div>
+      <div class="index-card">
+        <div class="card-label">02 · 使用场景</div>
+        <div class="card-title">常见用途</div>
+        <div class="card-desc">日常查询、资料归档、快速导航——适合需要稳定访问路径的用户。</div>
+      </div>
+      <div class="index-card">
+        <div class="card-label">03 · 访问环境</div>
+        <div class="card-title">连接要点</div>
+        <div class="card-desc">建议保持网络通畅，部分功能依赖稳定的出口线路。</div>
+      </div>
+      <div class="index-card">
+        <div class="card-label">04 · 相关资源</div>
+        <div class="card-title">延伸参考</div>
+        <div class="card-desc">帮助文档、社区笔记、更新日志索引（持续补充中）。</div>
+      </div>
+    </div>
+
+    <!-- 提示区：访问提醒 -->
+    <div class="notice-box">
+      <strong>⚠️ 访问提醒</strong><br>
+      使用 <a href="https://egress-leyu.com.cn">leyu</a> 时，建议核对当前网络环境是否满足基础要求。如果遇到页面加载缓慢或部分模块不可用，可以先检查 DNS 设置或暂时切换网络再试。平台不存储敏感个人数据，日常操作记录按标准策略定期清理。
+    </div>
+
+    <!-- 介绍 + 特点（自然融合） -->
+    <h2>🔍 特点与边界</h2>
+    <p>从设计上看，leyu 并没有堆砌复杂的功能树。它的界面以信息密度为主，尽量降低多余动效和装饰。几个比较突出的特点包括：</p>
+    <ul style="margin-left: 1.25rem; margin-bottom: 1.2rem; color: #2e2e2e;">
+      <li>内容结构扁平，通常三到四次点击就能到达目标层级；</li>
+      <li>不强制注册或创建账号，基础浏览权限开放；</li>
+      <li>页面更新频率不高，但关键节点会附带简短变更说明。</li>
+    </ul>
+    <p>当然，它也有自己的使用边界：不适合大文件传输、不提供实时聊天支持、部分历史内容需要手动翻页。了解这些之后，使用起来会更顺手。</p>
+
+    <!-- FAQ 摘要 -->
+    <h2>❓ 常见疑问摘要</h2>
+    <div class="faq-item">
+      <div class="faq-q">问：leyu 需要安装任何软件吗？</div>
+      <div class="faq-a">不需要。基于浏览器直接使用，移动端和桌面端表现一致。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">问：会不会有访问次数或频率限制？</div>
+      <div class="faq-a">普通浏览没有严格限制，但短时间密集请求可能触发临时保护措施，稍候再试即可。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">问：内容更新频率大概是怎样的？</div>
+      <div class="faq-a">核心模块通常按周或双周更新，边缘页面稳定较少变动。</div>
+    </div>
+
+    <!-- 相关信息区 -->
+    <h2>📎 相关信息</h2>
+    <div class="rel-links">
+      <span>📄 指南存档：</span>
+      <a href="#">使用基础</a>
+      <a href="#">常见字段说明</a>
+      <a href="#">状态码参考</a>
+      <span>🔗 推荐阅读：</span>
+      <a href="#">网络环境自查</a>
+      <a href="#">书签管理技巧</a>
+    </div>
+
+    <hr>
+
+    <footer class="footer-note">
+      本页仅为信息索引，具体功能以 <a href="https://egress-leyu.com.cn">leyu</a> 实际页面为准。 如有疑问，建议直接访问体验。
+    </footer>
+  </div>
+</body>
+</html>
